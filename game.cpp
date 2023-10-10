@@ -7,5 +7,17 @@ int main() {
     cout << "***********************" << endl;
 
     int secret_number = 42;
-    cout << "The number secret is " << secret_number << ". Don't tell it nobody!" << endl;  
+    int kick;
+    
+    cout << "Choose one number: ";
+    cin >> kick; // input values of keyboard
+    cout << "The value of kick is "<< kick << endl;
+
+    if (kick == secret_number){
+        cout << "Congratulations!, You got the secret number right!" << endl;
+    } else if (kick > secret_number) {
+        cout << "Your number is bigger than secret number!" << endl;
+    } else {
+        cout << "Your number is smaller than secret number!" << endl;
+    }
 }
