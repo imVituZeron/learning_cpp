@@ -6,16 +6,19 @@ int main() {
     cout << "* Welcome to the Game *" << endl;
     cout << "***********************" << endl;
 
-    int secret_number = 42;
+    const int SECRET_NUMBER = 42;
     int kick;
     
     cout << "Choose one number: ";
     cin >> kick; // input values of keyboard
     cout << "The value of kick is "<< kick << endl;
 
-    if (kick == secret_number){
+    bool win = kick == SECRET_NUMBER;
+    bool bigger_than_secretnumber = kick > SECRET_NUMBER;
+
+    if (win){
         cout << "Congratulations!, You got the secret number right!" << endl;
-    } else if (kick > secret_number) {
+    } else if (bigger_than_secretnumber) {
         cout << "Your number is bigger than secret number!" << endl;
     } else {
         cout << "Your number is smaller than secret number!" << endl;
