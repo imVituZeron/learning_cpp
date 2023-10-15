@@ -1,4 +1,6 @@
 #include<iostream> // this library use to std::cout <<
+#include<cstdlib> // This import for secret number become random
+#include<ctime> // 
 using namespace std; // this use std function to default on the all code.
 
 int main() {
@@ -21,7 +23,8 @@ int main() {
         attempt_number = 5;
     }
 
-    const int SECRET_NUMBER = 42;
+    srand(time(0)); // it is setting the seed for random function in line down
+    const int SECRET_NUMBER = rand() % 100;
     bool not_right = true;
     int attempts = 0;
 
